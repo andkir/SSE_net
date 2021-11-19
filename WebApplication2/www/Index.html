@@ -15,7 +15,7 @@
 
             source.addEventListener('error', function (e) {
                 if (e.eventPhase == EventSource.CLOSED)
-                    source.close()
+                   // source.close()
                 if (e.target.readyState == EventSource.CLOSED) {
                     console.log("Disconnected");
                 }

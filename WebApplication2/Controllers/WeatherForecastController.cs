@@ -10,7 +10,9 @@ namespace WebApplication2.Controllers
     {
         private static readonly string[] Summaries = new[]
         {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching",
+         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching",
+          "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
     };
 
         private readonly ILogger<WeatherForecastController> _logger;
@@ -43,9 +45,7 @@ namespace WebApplication2.Controllers
             {
                 await Response.WriteAsync($"data: Controller {item} at {DateTime.Now}\r\r");
 
-               
-
-                await Task.Delay(1 * 1000);
+                await Task.Delay(3 * 1000);
             }
 
             await Response.Body.FlushAsync();
